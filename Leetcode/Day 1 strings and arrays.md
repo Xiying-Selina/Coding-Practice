@@ -15,19 +15,3 @@ class Solution:
                 return middle
         return -1
 ```
-
-# 27. Remove Element
-Usage of two pointers.
-
-```
-class Solution:
-    def removeElement(self, nums: List[int], val: int) -> int:
-        slow, fast = 0,0
-
-        while fast < len(nums):
-            if nums[fast]!=val:
-                nums[slow] = nums[fast]
-                slow+=1
-            fast+=1
-        return slow
-```
