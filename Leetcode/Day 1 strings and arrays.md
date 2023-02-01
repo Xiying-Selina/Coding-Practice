@@ -1,4 +1,4 @@
-# Binary Search
+# 704. Binary Search
 Binary Search is a searching algorithm used in a sorted array by repeatedly dividing the search interval in half. The idea of binary search is to use the information that the array is sorted and reduce the time complexity to O(Log n). 
 
 ```
@@ -14,4 +14,20 @@ class Solution:
             else:
                 return middle
         return -1
+```
+
+# 27. Remove Element
+Usage of two pointers.
+
+```
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        slow, fast = 0,0
+
+        while fast < len(nums):
+            if nums[fast]!=val:
+                nums[slow] = nums[fast]
+                slow+=1
+            fast+=1
+        return slow
 ```
