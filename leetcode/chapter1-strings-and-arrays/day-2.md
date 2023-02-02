@@ -98,3 +98,68 @@ class Solution:
         
 ```
 ````
+
+## 904. Fruit Into Basket
+
+Run some test cases
+
+````
+// ```python3
+class Solution:
+    def totalFruit(self, fruits: List[int]) -> int:
+        begin , end = 0, 0
+        basket = {}
+        sums = 0
+        for end in range(len(fruits)):
+            basket[fruits[end]] = basket.get(fruits[end], 0)+1
+            while len(basket)>2:
+                basket[fruits[begin]] -=1
+                if basket[fruits[begin]]==0:
+                    del basket[fruits[begin]]
+                begin+=1                
+            sums = max(sums, end-begin+1)
+        return sums
+```
+````
+
+## 54. Spiral Matrix
+
+````
+// ```python3
+class Solution:
+    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+        result = []
+        rows, columns = len(matrix), len(matrix[0])
+        up = left = 0
+        right = columns - 1
+        down = rows - 1
+
+        while len(result) < rows * columns:
+            # Traverse from left to right.
+            for col in range(left, right + 1):
+                result.append(matrix[up][col])
+
+            # Traverse downwards.
+            for row in range(up + 1, down + 1):
+                result.append(matrix[row][right])
+
+            # Make sure we are now on a different row.
+            if up != down:
+                # Traverse from right to left.
+                for col in range(right - 1, left - 1, -1):
+                    result.append(matrix[down][col])
+
+            # Make sure we are now on a different column.
+            if left != right:
+                # Traverse upwards.
+                for row in range(down - 1, up, -1):
+                    result.append(matrix[row][left])
+
+            left += 1
+            right -= 1
+            up += 1
+            down -= 1
+
+        return result
+```
+````
