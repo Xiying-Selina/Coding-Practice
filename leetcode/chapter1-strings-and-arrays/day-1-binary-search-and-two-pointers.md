@@ -114,3 +114,30 @@ Usage of two pointers.
                 return middle
         return right+1
 ```
+
+## 74. Search a 2D Matrix
+
+````
+// ```python3
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        m, n = len(matrix), len(matrix[0])
+        left, right = 0, m*n-1
+        while left <= right:
+            mid_index= left+(right-left)//2
+            # col = index//n, row = index%n
+            # 10: index = 4, col = 0, row =1 
+            mid_element = matrix[mid_index//n][mid_index%n]
+            if mid_element > target:
+                right = mid_index - 1
+            elif mid_element < target:
+                left = mid_index + 1
+            else:
+                return True
+        return False
+
+        
+        
+        
+```
+````

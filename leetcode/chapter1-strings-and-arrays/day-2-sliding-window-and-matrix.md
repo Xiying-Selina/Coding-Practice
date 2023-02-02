@@ -1,4 +1,4 @@
-# Day 2:
+# Day 2: Sliding Window & Matrix
 
 ## 977. Squares of a Sorted Array
 
