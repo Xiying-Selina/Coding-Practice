@@ -26,6 +26,12 @@ class Solution:
 
 ## 209. Minimum Size Subarray Sum
 
+Sliding Window: begin point and end point
+
+First, move end point to iterate all elements, when the elements in this subarray meet the requirements, move the begin point to narrow down the window.
+
+Update the records of each window, usually the length, which is (end-begin+1). In this case, take the min in each updates.
+
 ````
 // ```python3
 class Solution:
@@ -47,6 +53,8 @@ class Solution:
 ````
 
 ## 59. Spiral Matrix II
+
+
 
 ````
 // ```python3
