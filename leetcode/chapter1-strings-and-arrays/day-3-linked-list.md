@@ -68,13 +68,10 @@ class MyLinkedList:
     def addAtIndex(self, index: int, val: int) -> None:
         if index>self.size:
             return 
-        if index<0:
-            index=0
         self.size+=1
         cur = self.head
         for i in range(index):
             cur = cur.next
-
         newnode = ListNode(val)
         newnode.next = cur.next
         cur.next = newnode
@@ -84,7 +81,6 @@ class MyLinkedList:
             return 
         self.size-=1
         cur = self.head
-
         for i in range(index):
             cur = cur.next
         cur.next = cur.next.next
