@@ -11,3 +11,4 @@
     * [Week 1](leetcode/chapter2-linked-list/week-1.md)
   * [Chapter3: Hashmap](leetcode/chapter3-hashmap/README.md)
     * [Day 5](leetcode/chapter3-hashmap/day-5.md)
+    * [Day 6](leetcode/chapter3-hashmap/day-6.md)
