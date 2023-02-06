@@ -90,3 +90,31 @@ class Solution:
         return ans
 ```
 ````
+
+## 1002. Find Common Characters
+
+[Link](https://leetcode.com/problems/find-common-characters/)
+
+````python
+// ```python3
+class Solution:
+    def commonChars(self, words: List[str]) -> List[str]:
+        # 用第一个单词初始化
+        ans=[]
+        records=[0]*26
+        for letter in words[0]:
+            records[ord(letter)-ord('a')]+=1
+        for i in range(1, len(words)):
+            temp=[0]*26
+            for letter in words[i]:
+                temp[ord(letter)-ord('a')]+=1
+            for letter in range(26):
+                records[letter] = min(temp[letter], records[letter])
+        # 遍历records
+        for i in range(26):
+            while records[i]!=0:
+                ans.append(chr(i+ord('a')))
+                records[i] -=1
+        return ans
+```
+````
