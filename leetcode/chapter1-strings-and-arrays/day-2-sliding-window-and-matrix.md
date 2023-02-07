@@ -5,7 +5,7 @@
 1. Since the array is non-descending, it's easy to come up with two pointers. The squared numbers in each sides would be greater than the squared numbers in the middle.
 2. Use two pointers to point the begin and the end, compare the suqared numbers of at each point. Move the pointers to the middle until they iterate all numbers in the list.
 
-````
+````python
 // ```python3
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
@@ -32,7 +32,7 @@ First, move end point to iterate all elements, when the elements in this subarra
 
 Update the records of each window, usually the length, which is (end-begin+1). In this case, take the min in each updates.
 
-````
+````python
 // ```python3
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
@@ -56,7 +56,7 @@ class Solution:
 
 
 
-````
+````python
 // ```python3
 class Solution:
     def generateMatrix(self, n: int) -> List[List[int]]:
@@ -103,7 +103,7 @@ class Solution:
 
 Run some test cases
 
-````
+````python
 // ```python3
 class Solution:
     def totalFruit(self, fruits: List[int]) -> int:
@@ -124,7 +124,7 @@ class Solution:
 
 ## 54. Spiral Matrix
 
-````
+````python
 // ```python3
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
