@@ -16,7 +16,7 @@ class MyLinkedList:
 
 ## 203. Remove Linked List Elements
 
-````python
+````
 // ```python3
 # Definition for singly-linked list.
 # class ListNode:
@@ -38,7 +38,7 @@ class Solution:
 
 ## 707. Design Linked List
 
-````python
+````
 // ```python3
 class ListNode(object):
     def __init__(self, val=0, next=None):
@@ -100,7 +100,7 @@ class MyLinkedList:
 
 ## 206. Reverse Linked List
 
-````python
+````
 // ```python3
 # Definition for singly-linked list.
 # class ListNode:

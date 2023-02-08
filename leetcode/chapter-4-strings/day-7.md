@@ -127,3 +127,23 @@ class Solution:
 
 ```
 ````
+
+## 剑指 Offer 58 - II. 左旋转字符串
+
+[Link](https://leetcode.cn/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/)
+
+````python
+// ```python3
+class Solution:
+    def reverseLeftWords(self, s: str, n: int) -> str:
+        lst = list(s)
+        # 1. 反转区间为前[0:n-1]的子串
+        lst[0:n] = reversed(lst[0:n])
+        # 2. 反转区间为[n:]到末尾的子串
+        lst[n:] = reversed(s[n:])
+        # 3. 反转整个字符串
+        lst = reversed(lst)
+        return "".join(lst)
+
+```
+````
