@@ -14,3 +14,4 @@
     * [Day 6](leetcode/chapter3-hashmap/day-6.md)
   * [Chapter 4: Strings](leetcode/chapter-4-strings/README.md)
     * [Day 7](leetcode/chapter-4-strings/day-7.md)
+    * [Day 8](leetcode/chapter-4-strings/day-8.md)
