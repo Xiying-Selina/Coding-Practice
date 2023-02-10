@@ -4,7 +4,7 @@
 
 Binary Search is a searching algorithm used in a sorted array by repeatedly dividing the search interval in half. The idea of binary search is to use the information that the array is sorted and reduce the time complexity to O(Log n).
 
-```
+```python
 // class Solution:
     def search(self, nums: List[int], target: int) -> int:
         left, right = 0, len(nums)-1
@@ -23,7 +23,7 @@ Binary Search is a searching algorithm used in a sorted array by repeatedly divi
 
 Usage of two pointers.
 
-```
+```python
 // class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         slow, fast = 0,0
@@ -38,7 +38,7 @@ Usage of two pointers.
 
 ## 26. Remove Duplicates from Sorted Array
 
-```
+```python
 // class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
 
@@ -52,7 +52,7 @@ Usage of two pointers.
 
 ## 28. Move Zeros
 
-```
+```python
 // class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
         """
@@ -68,7 +68,7 @@ Usage of two pointers.
 
 ## 34. Find First and Last Position of Element in Sorted Array
 
-```
+```python
 // class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         def lower_num(nums,target):
@@ -100,7 +100,7 @@ Usage of two pointers.
 
 ## 35. Search Insert Position
 
-```
+```python
 // class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
         left, right = 0, len(nums)-1
@@ -117,7 +117,7 @@ Usage of two pointers.
 
 ## 74. Search a 2D Matrix
 
-````
+````python
 // ```python3
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:

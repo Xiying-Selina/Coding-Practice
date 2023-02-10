@@ -1,127 +1,120 @@
-# Day 6
+# Day 5
 
-## 454. 4Sum II
+## 242. Valid Anagram
 
-[Link](https://leetcode.com/problems/4sum-ii/description/)
-
-````python
-//```python3
-class Solution:
-    def fourSumCount(self, nums1: List[int], nums2: List[int], nums3: List[int], nums4: List[int]) -> int:
-        res={} #存放前两个list数字和的可能情况，数字和：个数
-        count=0
-        # 4个list看成两组
-        # 先遍历前两组
-        for i in nums1:
-            for j in nums2:
-                if i+j not in res.keys():
-                    res[i+j] = 1
-                else:
-                    res[i+j] +=1
-        # 看后两组
-        for i in nums3:
-            for j in nums4:
-                if 0-(i+j) in res.keys():
-                    count+=res[0-(i+j)]
-        return count
-
-
-```
-````
-
-## 383. Ransom Note
-
-[Link](https://leetcode.com/problems/ransom-note/description/)
+[Link](https://leetcode.com/problems/valid-anagram/description/)
 
 ````python
 // ```python3
 class Solution:
-    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
-        res=[0]*26
-        # 记录magzine里面字母出现的次数
-        for i in magazine:
-            res[ord(i)-ord('a')]+=1
-        for i in ransomNote:
-            if res[ord(i)-ord('a')]<=0:
+    def isAnagram(self, s: str, t: str) -> bool:
+        # 用records作为空表，记录26个字母
+        records = [0]*26
+        # 分别遍历两个字符串，第一个字符给每个出现过的加一，第二个减一
+        for i in s:
+            records[ord(i)-ord('a')]+=1
+        for j in t:
+            records[ord(j)-ord('a')]-=1
+        # 如果表中有不为0的，说明不是anagram
+        for k in range(len(records)):
+            if records[k] != 0:
                 return False
-            else:
-                res[ord(i)-ord('a')]-=1
         return True
 ```
 ````
 
-## 13. 3Sum
+## 349. Intersection of Two Arrays
 
-[Link](https://leetcode.com/problems/3sum/description/)
-
-````python
-//```python3
-class Solution:
-    def threeSum(self, nums: List[int]) -> List[List[int]]:
-        # 不可以包含重复triplets，hashmap去重容易超时，此题可以用双指针
-        # 因为返回值是数值而非index，排序+双指针可行
-        nums = sorted(nums)
-        ans = []
-        for i in range(len(nums)):
-            # 已经排序情况下，如果首元素就大于0， 那么没有解
-            if nums[i]>0:
-                return ans
-            # 注意如果有连续几个相同的数值，应该越过相同的数值
-            # [-4,-1,-1,0,1,2] i=1: -1, left:0, right:1; i=2:-1, left:0, right:1重复
-            if i>0 and nums[i]==nums[i-1]:
-                continue
-            # 每一个元素之后的区间内，用双指针进行查找
-            left, right = i+1, len(nums)-1
-            while left<right:
-                # 移动左右指针
-                if nums[i]+nums[left]+nums[right]>0:
-                    right-=1
-                elif nums[i]+nums[left]+nums[right]<0:
-                    left+=1
-                else:
-                    ans.append([nums[i], nums[left], nums[right]])
-                    # 比如[-1,-1,-1,1,2]， i=0, left=1, right=4,之后left=2会生成同样的解
-                    while left != right and nums[left]==nums[left+1]: left+=1
-                    while left != right and nums[right]==nums[right-1]: right-=1
-                    # 找到满足的解后，两端指针都移动
-                    left+=1
-                    right-=1
-        return ans
-                
-
-
-```
-````
-
-## 18. 4Sum
-
-[Link](https://leetcode.com/problems/4sum/)
+[Link](https://leetcode.com/problems/intersection-of-two-arrays/description/)
 
 ````python
 // ```python3
 class Solution:
-    def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
-        # 类似三数之和，可以想到双指针的方法
-        nums= sorted(nums)
-        ans=[]
+    def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        records = set()
+        res = []
+        for num in nums1:
+            records.add(num)
+        for num in nums2:
+            if num in records:
+                res.append(num)
+                records.remove(num)
+        return res
+```
+````
+
+## 202. Happy Number
+
+[Link](https://leetcode.com/problems/happy-number/description/)
+
+````python
+// ```python3
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        # 记录出现过的每一个数字，如果成为循环，必然有重复的数字
+        records = set()
+        while n!= 1:
+            # 求新的数字
+            new_num=0
+            for i in str(n):
+                new_num += int(i)**2
+            # 出现循环就停止
+            if new_num in records:
+                return False
+            # 没有循环则记录新的n
+            n=new_num
+            records.add(n)
+        return True
+```
+````
+
+## 1. Two Sum
+
+[Link](https://leetcode.com/problems/two-sum/description/)
+
+````python
+// ```python3
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        # 用records记录出现过的数字，以及他们的index
+        # 需要记录value和index，则需要用dict来记录
+        records = {}
+        ans = []
         for i in range(len(nums)):
-            if i>0 and nums[i]==nums[i-1]: continue
-            for j in range(i+1, len(nums)):
-                if j>i+1 and nums[j]==nums[j-1]: continue
-                left, right = j+1, len(nums)-1
-                while left<right:
-                    if nums[i]+nums[j]+nums[left]+nums[right]>target:
-                        right-=1
-                    elif nums[i]+nums[j]+nums[left]+nums[right]<target:
-                        left+=1
-                    else:
-                        ans.append([nums[i],nums[j],nums[left],nums[right]])
-                        while left!=right and nums[left]==nums[left+1]: left+=1
-                        while left!=right and nums[right]==nums[right-1]: right-=1
-                        right-=1
-                        left+=1
+            if target-nums[i] not in records.keys():
+                records[nums[i]] = i #记录出现过的数字及位置
+            else:
+                ans.append(records[target-nums[i]])
+                ans.append(i)
+        # 返回值是index
         return ans
+```
+````
 
+## 1002. Find Common Characters
 
+[Link](https://leetcode.com/problems/find-common-characters/)
+
+````python
+// ```python3
+class Solution:
+    def commonChars(self, words: List[str]) -> List[str]:
+        # 用第一个单词初始化
+        ans=[]
+        records=[0]*26
+        for letter in words[0]:
+            records[ord(letter)-ord('a')]+=1
+        for i in range(1, len(words)):
+            temp=[0]*26
+            for letter in words[i]:
+                temp[ord(letter)-ord('a')]+=1
+            for letter in range(26):
+                records[letter] = min(temp[letter], records[letter])
+        # 遍历records
+        for i in range(26):
+            while records[i]!=0:
+                ans.append(chr(i+ord('a')))
+                records[i] -=1
+        return ans
 ```
 ````
