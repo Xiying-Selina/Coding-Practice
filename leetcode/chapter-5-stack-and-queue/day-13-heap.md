@@ -1,4 +1,4 @@
-# Day 12: Heap
+# Day 13: Heap
 
 ## 347. Top K Frequent Elements
 
