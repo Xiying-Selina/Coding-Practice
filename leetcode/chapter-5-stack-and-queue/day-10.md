@@ -1,4 +1,4 @@
-# Day 10
+# Day 10: Stack/Queue implementation
 
 ## 232. Implement Queue using Stacks
 

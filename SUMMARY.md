@@ -16,5 +16,6 @@
     * [Day 9](leetcode/chapter-4-strings/day-9.md)
     * [Day 8](leetcode/chapter-4-strings/day-8.md)
   * [Chapter 5: Stack & Queue](leetcode/chapter-5-stack-and-queue/README.md)
-    * [Day 10: Stack/Queue implementation](leetcode/chapter-5-stack-and-queue/day-10-stack-queue-implementation.md)
+    * [Day 10: Stack/Queue implementation](leetcode/chapter-5-stack-and-queue/day-10.md)
     * [Day 11: Application of stack](leetcode/chapter-5-stack-and-queue/day-11-application-of-stack.md)
+    * [Day 12: Heap](leetcode/chapter-5-stack-and-queue/day-12-heap.md)
