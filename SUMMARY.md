@@ -21,6 +21,7 @@
     * [Day 12](leetcode/chapter-5-stack-and-queue/day-12.md)
     * [Day 13: Heap](leetcode/chapter-5-stack-and-queue/day-13-heap.md)
   * [Chapter 6: Tree](leetcode/chapter-6-tree/README.md)
-    * [Day 14:](leetcode/chapter-6-tree/day-14.md)
+    * [Day 14: 递归遍历](leetcode/chapter-6-tree/day-14-di-gui-bian-li.md)
+    * [Day 15: 层序遍历+翻转+对称](leetcode/chapter-6-tree/day-15-ceng-xu-bian-li-+-fan-zhuan-+-dui-cheng.md)
 * [Python & Data Structure](python-and-data-structure/README.md)
   * [Tree](python-and-data-structure/tree.md)
