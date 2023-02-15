@@ -420,16 +420,60 @@ class Solution:
 
 ## 100. Same Tree
 
-Link
+[Link](https://leetcode.com/problems/same-tree/submissions/898275291/)
 
 ```python
-// Some code
+// # Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        # 与101.Symmetric Tree相似，可以用后序遍历
+        # 因为需要把下层信息传递到上层
+
+        # null check & value unequal check
+        if p is None and q is None: return True
+        elif p and q is None: return False
+        elif p is None and q: return False
+        elif p.val !=q.val: return False
+
+        # postorder: left, right,parent
+        lSame = self.isSameTree(p.left, q.left)
+        rSame = self.isSameTree(p.right, q.right)
+        isSame = lSame and rSame
+        return isSame
 ```
 
 ## 572. Subtree of Another Tree
 
-Link
+[Link](https://leetcode.com/problems/subtree-of-another-tree/submissions/898286791/)
 
 ```python
-// Some code
+// # Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
+        # 与101.Symmetric Tree相似，可以用后序遍历
+        # 因为需要把下层信息传递到上层
+        if root is None: return False
+        elif self.isIdentical(root, subRoot): return True
+        return self.isSubtree(root.left,subRoot) or self.isSubtree(root.right,subRoot)
+
+    def isIdentical(self,root, subRoot):
+        # null check
+        if root is None and subRoot is None: return True
+        elif root is None and subRoot: return False
+        elif root and subRoot is None: return False
+        # postorder: left, right, parent
+        lcheck = self.isIdentical(root.left, subRoot.left)
+        rcheck = self.isIdentical(root.right, subRoot.right)
+        subcheck = root.val==subRoot.val and lcheck and rcheck
+        return subcheck
 ```
