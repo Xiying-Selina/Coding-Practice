@@ -272,3 +272,38 @@ class Solution:
         
 ```
 ````
+
+### 完全二叉树
+
+````python
+// ```python3
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def countNodes(self, root: Optional[TreeNode]) -> int:
+        # 完全二叉树只有两种情况，情况一：就是满二叉树，情况二：最后一层叶子节点没有满。
+        # 对于情况一，可以直接用 2^树深度 - 1 来计算，注意这里根节点深度为1。
+        # 对于情况二，分别递归左孩子，和右孩子，递归到某一深度一定会有左孩子或者右孩子为满二叉树，然后依然可以按照情况1来计算。
+        if not root:
+            return 0
+        # 在完全二叉树中，如果递归向左遍历的深度等于递归向右遍历的深度，那说明就是满二叉树。
+        # 求左子树深度
+        left = root.left
+        right = root.right
+        leftDepth = 0 #这里初始为0是有目的的，为了下面求指数方便
+        rightDepth = 0
+        while left: #求左子树深度
+            left = left.left
+            leftDepth += 1
+        while right: #求右子树深度
+            right = right.right
+            rightDepth += 1
+        if leftDepth == rightDepth:
+            return (2 << leftDepth) - 1 #注意(2<<1) 相当于2^2，所以leftDepth初始为0
+        return self.countNodes(root.left) + self.countNodes(root.right) + 1
+```
+````
