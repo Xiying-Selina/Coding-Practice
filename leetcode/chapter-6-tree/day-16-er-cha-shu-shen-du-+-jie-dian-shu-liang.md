@@ -210,8 +210,65 @@ class Solution:
 
 ## 222. Count Complete Tree Nodes
 
-Link
+[Link](https://leetcode.com/problems/count-complete-tree-nodes/description/)
 
-```python
-// Some code
+### 层序遍历
+
+````python
+// ```python3
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+from collections import deque
+class Solution:
+    def countNodes(self, root: Optional[TreeNode]) -> int:
+        # 普通二叉树也可以的方法
+        # 层序遍历，遍历每层的节点数量
+        if not root:
+            return 0
+        res=0
+        que=deque([root])
+        while que:
+            size=len(que)
+            for i in range(size):
+                cur=que.popleft()
+                res+=1
+                if cur.left:
+                    que.append(cur.left)
+                if cur.right:
+                    que.append(cur.right)
+        return res
+
 ```
+````
+
+### 后序遍历
+
+````python
+// ```python3
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def countNodes(self, root: Optional[TreeNode]) -> int:
+        # 后序遍历：普通二叉树也可以使用的方法
+        # postorder: left, right, parent
+        return self.getNum(root)
+
+    def getNum(self, node):
+        if not node:
+            return 0
+        lcount = self.getNum(node.left) # left
+        rcount = self.getNum(node.right) # right
+        count = lcount+rcount+1 #左子树个数+右子树个数+自己
+        return count
+        
+        
+```
+````
