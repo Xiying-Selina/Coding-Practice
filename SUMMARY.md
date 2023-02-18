@@ -25,5 +25,6 @@
     * [Day 15: 层序遍历+翻转+对称](leetcode/chapter-6-tree/day-15-ceng-xu-bian-li-+-fan-zhuan-+-dui-cheng.md)
     * [Day 16: 二叉树深度+节点数量](leetcode/chapter-6-tree/day-16-er-cha-shu-shen-du-+-jie-dian-shu-liang.md)
     * [Day 17](leetcode/chapter-6-tree/day-17.md)
+    * [Day 18](leetcode/chapter-6-tree/day-18.md)
 * [Python & Data Structure](python-and-data-structure/README.md)
   * [Tree](python-and-data-structure/tree.md)
