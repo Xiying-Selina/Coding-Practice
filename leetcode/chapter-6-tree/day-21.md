@@ -2,7 +2,7 @@
 
 ## 530. Minimum Absolute Difference in BST
 
-link
+[link](https://leetcode.com/problems/minimum-absolute-difference-in-bst/)
 
 ````python
 // ```python3

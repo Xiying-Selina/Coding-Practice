@@ -29,5 +29,6 @@
     * [Day 19: 休息](leetcode/chapter-6-tree/day-19-xiu-xi.md)
     * [Day 20](leetcode/chapter-6-tree/day-20.md)
     * [Day 21](leetcode/chapter-6-tree/day-21.md)
+    * [Day 22](leetcode/chapter-6-tree/day-22.md)
 * [Python & Data Structure](python-and-data-structure/README.md)
   * [Tree](python-and-data-structure/tree.md)
