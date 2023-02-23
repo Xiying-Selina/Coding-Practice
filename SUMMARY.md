@@ -30,5 +30,6 @@
     * [Day 20](leetcode/chapter-6-tree/day-20.md)
     * [Day 21](leetcode/chapter-6-tree/day-21.md)
     * [Day 22](leetcode/chapter-6-tree/day-22.md)
+    * [Day 23](leetcode/chapter-6-tree/day-23.md)
 * [Python & Data Structure](python-and-data-structure/README.md)
   * [Tree](python-and-data-structure/tree.md)
