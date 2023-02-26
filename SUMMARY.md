@@ -31,6 +31,7 @@
     * [Day 21](leetcode/chapter-6-tree/day-21.md)
     * [Day 22](leetcode/chapter-6-tree/day-22.md)
     * [Day 23](leetcode/chapter-6-tree/day-23.md)
-  * [Chapter 7: Backtracking](leetcode/chapter-7-backtracking.md)
+  * [Chapter 7: Backtracking](leetcode/chapter-7-backtracking/README.md)
+    * [Day 24 & 25](leetcode/chapter-7-backtracking/day-24-and-25.md)
 * [Python & Data Structure](python-and-data-structure/README.md)
   * [Tree](python-and-data-structure/tree.md)
