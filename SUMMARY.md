@@ -33,6 +33,6 @@
   * [Chapter 7: Backtracking](leetcode/chapter-7-backtracking/README.md)
     * [Day 24 & 25 & 26](leetcode/chapter-7-backtracking/day-24-and-25-and-26.md)
     * [Day 27：组合与切割](leetcode/chapter-7-backtracking/day-27-zu-he-yu-qie-ge.md)
-    * [Day 28](leetcode/chapter-7-backtracking/day-28.md)
+    * [Day 28：切割与子集](leetcode/chapter-7-backtracking/day-28-qie-ge-yu-zi-ji.md)
 * [Python & Data Structure](python-and-data-structure/README.md)
   * [Tree](python-and-data-structure/tree.md)
