@@ -36,5 +36,7 @@
     * [Day 28：切割与子集](leetcode/chapter-7-backtracking/day-28-qie-ge-yu-zi-ji.md)
     * [Day 29: 子集与排列](leetcode/chapter-7-backtracking/day-29-zi-ji-yu-pai-lie.md)
     * [Day 30: 棋盘问题](leetcode/chapter-7-backtracking/day-30-qi-pan-wen-ti.md)
+  * [Chapter 8: Greedy](leetcode/chapter-8-greedy/README.md)
+    * [Day 31](leetcode/chapter-8-greedy/day-31.md)
 * [Python & Data Structure](python-and-data-structure/README.md)
   * [Tree](python-and-data-structure/tree.md)
