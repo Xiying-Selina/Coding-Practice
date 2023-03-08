@@ -42,5 +42,6 @@
     * [Day 34](leetcode/chapter-8-greedy/day-34.md)
     * [Day 35](leetcode/chapter-8-greedy/day-35.md)
     * [Day 36](leetcode/chapter-8-greedy/day-36.md)
+    * [Day 37](leetcode/chapter-8-greedy/day-37.md)
 * [Python & Data Structure](python-and-data-structure/README.md)
   * [Tree](python-and-data-structure/tree.md)
