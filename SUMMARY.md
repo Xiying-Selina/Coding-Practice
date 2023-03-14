@@ -43,5 +43,7 @@
     * [Day 35](leetcode/chapter-8-greedy/day-35.md)
     * [Day 36](leetcode/chapter-8-greedy/day-36.md)
     * [Day 37](leetcode/chapter-8-greedy/day-37.md)
+  * [Chapter 9: Dynamic Programming](leetcode/chapter-9-dynamic-programming/README.md)
+    * [Day 38: Fibonacci](leetcode/chapter-9-dynamic-programming/day-38-fibonacci.md)
 * [Python & Data Structure](python-and-data-structure/README.md)
   * [Tree](python-and-data-structure/tree.md)
